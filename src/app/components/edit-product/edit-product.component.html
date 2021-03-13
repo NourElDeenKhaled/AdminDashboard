@@ -6,7 +6,7 @@
             <input type="text" required class="form-control" aria-describedby="helpId" 
             #proName="ngModel" [class.is-invalid]="proName.invalid && proName.touched" [(ngModel)]="newProduct.name"
             id="proName" minlength="2" name="Name" [class.is-valid]="proName.valid" placeholder="{{'Enterproductname'|translate}}" #Name>
-          <small [hidden]="proName.valid || proName.untouched" id="helpId" class="text-muted alert alert-danger">{{'ProductName'|translate}} {{'mustBeLetters'|translate}}</small>
+          <p [hidden]="proName.valid || proName.untouched" id="helpId" class="text-muted alert alert-danger mt-2">{{'ProductName'|translate}} {{'mustBeLetters'|translate}}</p>
             <p class="mt-2" style="color: gray;">{{'Current'|translate}} {{product?.name}}</p>
         </div>
         <div class="form-group">
@@ -15,7 +15,7 @@
             #proArabicName="ngModel" [class.is-invalid]="proArabicName.invalid && proArabicName.touched" [(ngModel)]="newProduct.arabicName"
             id="proArabicName" minlength="2" name="ArabicName" [class.is-valid]="proArabicName.valid" placeholder="{{'Enterproductname'|translate}}"
                 #ArabicName>
-          <small [hidden]="proArabicName.valid || proArabicName.untouched" id="helpId" class="text-muted alert alert-danger">{{'ArabicProductName'|translate}} {{'mustBeLetters'|translate}}</small>
+          <p [hidden]="proArabicName.valid || proArabicName.untouched" id="helpId" class="text-muted alert alert-danger mt-2">{{'ArabicProductName'|translate}} {{'mustBeLetters'|translate}}</p>
             <p class="mt-2" style="color: gray;">{{'Current'|translate}} {{product?.arabicName}}</p>
         </div>
         <div class="form-group">
@@ -24,7 +24,7 @@
             #proDesc="ngModel" [class.is-invalid]="proDesc.invalid && proDesc.touched" [(ngModel)]="newProduct.description"
             id="proDesc"minlength="2" name="description" [class.is-valid]="proDesc.valid" placeholder="{{'Enterproductdescription'|translate}}"
                 #description>
-          <small [hidden]="proDesc.valid || proDesc.untouched" id="helpId" class="text-muted alert alert-danger">{{'ProductDescription'|translate}} {{'mustBeLetters'|translate}}</small>
+          <p [hidden]="proDesc.valid || proDesc.untouched" id="helpId" class="text-muted alert alert-danger mt-2">{{'ProductDescription'|translate}} {{'mustBeLetters'|translate}}</p>
         <p class="mt-2" style="color: gray;">{{'Current'|translate}} {{product?.description}}</p>
         </div>
         <div class="form-group">
@@ -33,7 +33,7 @@
             #proArabicDesc="ngModel" [class.is-invalid]="proArabicDesc.invalid && proArabicDesc.touched" [(ngModel)]="newProduct.arabicDescription"
             id="proArabicDesc" minlength="2" name="ArabicDescription" [class.is-valid]="proArabicDesc.valid" placeholder="{{'Enterproductdescription'|translate}}"
                 #ArabicDescription>
-          <small [hidden]="proArabicDesc.valid || proArabicDesc.untouched" id="helpId" class="text-muted alert alert-danger">{{'ArabicProductDescription'|translate}} {{'mustBeLetters'|translate}}</small>
+          <p [hidden]="proArabicDesc.valid || proArabicDesc.untouched" id="helpId" class="text-muted alert alert-danger mt-2">{{'ArabicProductDescription'|translate}} {{'mustBeLetters'|translate}}</p>
         <p class="mt-2" style="color: gray;">{{'Current'|translate}} {{product?.arabicDescription}}</p>
         </div>
         <div class="form-group">
@@ -42,7 +42,7 @@
             #related="ngModel" [class.is-invalid]="related.invalid && related.touched" [(ngModel)]="newProduct.relatedProducts[0]"
             id="related" minlength="2" name="Related" [class.is-valid]="related.valid" placeholder="{{'Related'|translate}}"
                 #Related>
-          <small [hidden]="related.valid || related.untouched" id="helpId" class="text-muted alert alert-danger">{{'Related'|translate}} {{'mustBeLetters'|translate}}</small>
+          <p [hidden]="related.valid || related.untouched" id="helpId" class="text-muted alert alert-danger mt-2">{{'Related'|translate}} {{'mustBeLetters'|translate}}</p>
         <p class="mt-2" style="color: gray;">{{'Current'|translate}} {{product?.relatedProducts}}</p>
         </div>
         <div class="form-group">
@@ -51,7 +51,7 @@
             #proPrice="ngModel" [class.is-invalid]="proPrice.invalid && proPrice.touched" [(ngModel)]="newProduct.price"
             id="proPrice" minlength="2" name="Price" [class.is-valid]="proPrice.valid" placeholder="{{'Enterproductprice'|translate}}"
                 #Price>
-          <small [hidden]="proPrice.valid || proPrice.untouched" id="helpId" class="text-muted alert alert-danger">{{'ProductPrice'|translate}} {{'mustBeLetters'|translate}}</small>
+          <p [hidden]="proPrice.valid || proPrice.untouched" id="helpId" class="text-muted alert alert-danger mt-2">{{'ProductPrice'|translate}} {{'mustBeLetters'|translate}}</p>
         <p class="mt-2" style="color: gray;">{{'Current'|translate}} {{product?.price}}</p>
         </div>
         <div class="form-group">
@@ -60,7 +60,7 @@
             #proStock="ngModel" [class.is-invalid]="proStock.invalid && proStock.touched" [(ngModel)]="newProduct.stock"
             id="proStock" minlength="2" name="Stock" [class.is-valid]="proStock.valid" placeholder="{{'Enterproductstock'|translate}}"
                 #Stock>
-          <small [hidden]="proStock.valid || proStock.untouched" id="helpId" class="text-muted alert alert-danger">{{'ProductStock'|translate}} {{'mustBeLetters'|translate}}</small>
+          <p [hidden]="proStock.valid || proStock.untouched" id="helpId" class="text-muted alert alert-danger mt-2">{{'ProductStock'|translate}} {{'mustBeLetters'|translate}}</p>
         <p class="mt-2" style="color: gray;">{{'Current'|translate}} {{product?.stock}}</p>
         </div>
         <!-- <div class="form-group">
@@ -72,7 +72,7 @@
             <input type="text" required class="form-control" aria-describedby="helpId" 
             #image="ngModel" [class.is-invalid]="image.invalid && image.touched" [(ngModel)]="newProduct.image"
             id="image" minlength="2" name="Image" [class.is-valid]="image.valid" placeholder="{{'EnterPathImage'|translate}}" #Image>
-          <small [hidden]="image.valid || image.untouched" id="helpId" class="text-muted alert alert-danger">{{'PathImage'|translate}} {{'mustBeLetters'|translate}}</small>
+          <p [hidden]="image.valid || image.untouched" id="helpId" class="text-muted alert alert-danger mt-2">{{'PathImage'|translate}} {{'mustBeLetters'|translate}}</p>
         <p class="mt-2" style="color: gray;">{{'Current'|translate}} {{product?.image}}</p>
         </div>
         <div class="form-group">
@@ -80,7 +80,7 @@
             <input type="text" required class="form-control" aria-describedby="helpId" 
             #image1="ngModel" [class.is-invalid]="image1.invalid && image1.touched" [(ngModel)]="newProduct.images[0]"
             id="image1" minlength="2" name="Image1" [class.is-valid]="image1.valid" placeholder="{{'EnterSubImage1'|translate}}" #Image1>
-          <small [hidden]="image1.valid || image1.untouched" id="helpId" class="text-muted alert alert-danger">{{'SubImage1'|translate}} {{'mustBeLetters'|translate}}</small>
+          <p [hidden]="image1.valid || image1.untouched" id="helpId" class="text-muted alert alert-danger mt-2">{{'SubImage1'|translate}} {{'mustBeLetters'|translate}}</p>
         <p class="mt-2" style="color: gray;">{{'Current'|translate}} {{product?.images[0]}}</p>
         </div>
         <div class="form-group">
@@ -88,7 +88,7 @@
             <input type="text" required class="form-control" aria-describedby="helpId" 
             #image2="ngModel" [class.is-invalid]="image2.invalid && image2.touched" [(ngModel)]="newProduct.images[1]"
             id="image2" minlength="2" name="Image2" [class.is-valid]="image2.valid" placeholder="{{'EnterSubImage2'|translate}}" #Image2>
-          <small [hidden]="image2.valid || image2.untouched" id="helpId" class="text-muted alert alert-danger">{{'SubImage2'|translate}} {{'mustBeLetters'|translate}}</small>
+          <p [hidden]="image2.valid || image2.untouched" id="helpId" class="text-muted alert alert-danger mt-2">{{'SubImage2'|translate}} {{'mustBeLetters'|translate}}</p>
         <p class="mt-2" style="color: gray;">{{'Current'|translate}} {{product?.images[1]}}</p>
         </div>
         <div class="form-group">
@@ -96,7 +96,7 @@
             <input type="text" required class="form-control" aria-describedby="helpId" 
             #image3="ngModel" [class.is-invalid]="image3.invalid && image3.touched" [(ngModel)]="newProduct.images[2]"
             id="image3" minlength="2" name="Image3" [class.is-valid]="image3.valid" placeholder="{{'EnterSubImage3'|translate}}" #Image3>
-          <small [hidden]="image3.valid || image3.untouched" id="helpId" class="text-muted alert alert-danger">{{'SubImage3'|translate}} {{'mustBeLetters'|translate}}</small>
+          <p [hidden]="image3.valid || image3.untouched" id="helpId" class="text-muted alert alert-danger mt-2">{{'SubImage3'|translate}} {{'mustBeLetters'|translate}}</p>
         <p class="mt-2" style="color: gray;">{{'Current'|translate}} {{product?.images[2]}}</p>
         </div>
         <!-- Available  -->
@@ -110,11 +110,11 @@
             <select class="form-control" [(ngModel)]="newProduct.categoryID" #SelectCat name="catSelect">
                 <option *ngFor="let cat of CategoryList" [value]="cat.id">{{cat.name}}</option>
             </select>
-            <small id="helpId" class="text-muted">{{'MustSelecteCategory'|translate}}</small>
+            <p id="helpId" class="text-muted">{{'MustSelecteCategory'|translate}}</p>
         </div>
 
         <div class="form-group">
-            <button class="btn btn-dark" [disabled]="frm.invalid" type="submit">{{'EditProduct'|translate}}</button>
+            <button class="btn" style="background-color: #854fff; color: white; font-weight: bold;" [disabled]="frm.invalid" type="submit">{{'EditProduct'|translate}}</button>
         </div>
     </form>
 
