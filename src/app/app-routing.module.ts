@@ -30,7 +30,8 @@ const routes: Routes = [
       {path: '', redirectTo: 'Dashboard', pathMatch: 'full'},
     ]
   },
-  {path: '**', redirectTo: 'Admin'}
+  {path: '', redirectTo: 'Login', pathMatch: 'full'},
+  {path: '**', redirectTo: 'Login'}
 ];
 
 @NgModule({
