@@ -90,5 +90,8 @@
     "EnterCategoryDescription":"أدخل وصف الفئة",
     "EnterCategoryname":"أدخل اسم الفئة",
     "mustBeLetters":"يجب أن يكون أكثر من حرفين",
-    "MustSelecteCategory":"يجب تحديد الفئة"
+    "mustBeNumbers":"يجب أن يكون رقما موجبا",
+    "MustSelecteCategory":"يجب تحديد الفئة",
+    "ShowCurrent": "إظهار البيانات الحالية",
+    "isAdmin": "ادمن؟"
 }

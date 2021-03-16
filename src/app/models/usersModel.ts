@@ -1,8 +1,9 @@
 export class UserModel {
     uid?: any;
     name?: string;
-    email: string;
-    password: string;
+    email?: string;
+    password?: string;
+    isAdmin?: boolean;
     displayName?: string;
     birthday?: {
         month: number;

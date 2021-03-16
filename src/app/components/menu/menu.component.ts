@@ -34,6 +34,7 @@ export class MenuComponent implements OnInit {
     this.userID = JSON.parse(localStorage.getItem('user')).uid;
     this.subscription.push(this.userSrv.getSpcUser(this.userID).subscribe(data => {
       this.admin = { id: data.payload.id, ...(data.payload.data() as {}) };
+      if(this.admin.isAdmin === false) this.logout();
     })
     );
   }

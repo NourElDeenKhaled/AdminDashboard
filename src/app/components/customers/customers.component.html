@@ -26,6 +26,7 @@
                 <!-- <th scope="col"><small>Name</small></th> -->
                 <th scope="col"><small>{{'Email'|translate}}</small></th>
                 <th scope="col"><small>{{'Birth'|translate}}</small></th>
+                <th scope="col"><small>{{'isAdmin'|translate}}</small></th>
                 <!-- <th scope="col"><small>Ordered</small></th> -->
                 <!-- <th scope="col"><small>Phone</small></th> -->
               </tr>
@@ -36,6 +37,8 @@
                 <!-- <td class="name text-truncate">{{item.name}}</td> -->
                 <td class="name text-truncate">{{item.email}}</td>
                 <td class="date text-truncate"><small>{{item.birthday.day}}-{{item.birthday.month}}-{{item.birthday.year}}</small></td>
+                <td class="date text-truncate" *ngIf="item.isAdmin" (click)="makeAdmin(false, item.uid)"><i class="fa fa-user-circle fa-2x text-success" aria-hidden="true"></i></td>
+                <td class="date text-truncate" *ngIf="!item.isAdmin" (click)="makeAdmin(true, item.uid)"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></td>
                 <!-- <td class="phone"><small>{{item.phoneNumber}}</small></td> -->
                 
                 <td class="d-flex">

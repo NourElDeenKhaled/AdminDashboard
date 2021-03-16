@@ -29,6 +29,10 @@ export class CustomersComponent implements OnInit {
     });
   }
 
+  makeAdmin(value, id) {
+    this.customerSrv.makeAdmin(value, id);
+  }
+
   deleteCustomer(id) {
     this.customerSrv.deleteUser(id);
   }

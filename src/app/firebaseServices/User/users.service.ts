@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { UserModel } from 'src/app/models/usersModel';
 
 @Injectable({
@@ -7,7 +7,8 @@ import { UserModel } from 'src/app/models/usersModel';
 })
 export class UsersService {
 
-  constructor(private firestore: AngularFirestore) { }
+  constructor(private firestore: AngularFirestore,
+    public afs: AngularFirestore) { }
 
   getUsers() {
     return this.firestore.collection('users').snapshotChanges();
@@ -17,6 +18,16 @@ export class UsersService {
   }
   createUser(user: UserModel) {
     return this.firestore.collection('users').add(user);
+  }
+  makeAdmin(value: boolean,forID: any) {
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${forID}`);
+      const userState: UserModel = {
+        isAdmin: value
+      }
+
+      return userRef.set(userState, {
+        merge: true
+      })
   }
   updateUser(user: UserModel) {
     delete user.uid;

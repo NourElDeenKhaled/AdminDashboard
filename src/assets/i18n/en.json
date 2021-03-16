@@ -90,5 +90,8 @@
     "EnterCategoryDescription":"Enter Category Description",
     "EnterCategoryname":"Enter Category name",
     "mustBeLetters":"must be more than 2 letters",
-    "MustSelecteCategory":"Must Selecte Category"
+    "mustBeNumbers":"must be a positive number",
+    "MustSelecteCategory":"Must Selecte Category",
+    "ShowCurrent": "Show current data",
+    "isAdmin": "isAdmin?"
 }
