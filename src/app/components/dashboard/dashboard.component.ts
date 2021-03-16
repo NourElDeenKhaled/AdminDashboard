@@ -21,6 +21,8 @@ export class DashboardComponent implements OnInit {
     productList;
     categoryList;
     subscription: Subscription[] = [];
+    ordsSubTotal: number = 0;
+    ordsAvg: number = 0;
 
 
     constructor(private prdSrv: ProductsService,
@@ -165,6 +167,8 @@ export class DashboardComponent implements OnInit {
                 return { id: e.payload.doc.id, ...(e.payload.doc.data() as {}) };
             })
             this.totalOrds=this.orderList.length;
+            this.calculateTotalOrds(this.orderList);
+            this.calculateAvgOrds(this.orderList);
         }))
         this.subscription.push(this.prdSrv.getProducts().subscribe(data => {
             this.productList = data.map(e => {
@@ -185,4 +189,17 @@ export class DashboardComponent implements OnInit {
         return `${x?.email}`
     }
 
+    calculateTotalOrds(orders) {
+        this.ordsSubTotal = 0;
+        orders.forEach(element => {
+            this.ordsSubTotal += element.totalPrice;
+            console.log('called');
+        });
+    }
+    calculateAvgOrds(orders) {
+        let total:any = this.ordsSubTotal;
+        this.ordsAvg = total/this.totalOrds;
+    }
+
 }
+

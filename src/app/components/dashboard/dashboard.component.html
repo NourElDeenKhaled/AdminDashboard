@@ -95,11 +95,11 @@
                             <p class="card-text font-weight-bold">{{'TotalSales'|translate}}</p>
                             <a href="javascript:void(0)" class="ml-auto totalSalesView"><small>{{'ViewReport'|translate}}</small></a>
                         </div>
-                        <h2 class="font-weight-bold">$74,958.49</h2>
+                        <h2 class="font-weight-bold">{{ordsSubTotal | currency}}</h2>
                         <p class="totalSalesDashTxt"><small>$7,395.37 {{'month'|translate}}</small></p>
                         <p><small class="font-weight-bold">{{'Thisweekfar'|translate}}</small></p>
                         <div class="d-flex align-items-center">
-                            <h2 class="font-weight-bold">$1,338.72</h2>
+                            <h2 class="font-weight-bold">{{ordsSubTotal | currency}}</h2>
                             <div class="d-flex flex-column ml-auto">
                                 <span class="text-right totalSalesDashPercentage"><i
                                         class="fas fa-long-arrow-alt-up fa-sm"></i>
@@ -130,7 +130,7 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center">
-                            <h2 class="font-weight-bold">$463.35</h2>
+                            <h2 class="font-weight-bold">{{ordsAvg | currency}}</h2>
                             <div class="d-flex flex-column ml-auto">
                                 <span class="text-right averageOrderDashPercentage"><i
                                         class="fas fa-long-arrow-alt-up fa-sm"></i> 4.63%</span>
@@ -189,7 +189,7 @@
                                             <div>
                                                 <span
                                                     class="text-right font-weight-bold align-self-center target">
-                                                    $2797</span>
+                                                    {{ordsSubTotal | currency}}</span>
                                             </div>
                                         </div>
                                         <div class="progress">
